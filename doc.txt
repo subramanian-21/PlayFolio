@@ -1,0 +1,9 @@
+cl_id:njya11k4qqtwzmymak0dxzkzfp7f4m
+
+cl_sec:ey9yvdw3memdwedrc1b5zd62ri7hij
+
+{
+    "access_token": "r7mua7uczzrdnoloufa2qsg202l3fv",
+    "expires_in": 5258168,
+    "token_type": "bearer"
+}
