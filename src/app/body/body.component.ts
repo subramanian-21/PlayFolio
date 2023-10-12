@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./body.component.css']
 })
 export class BodyComponent {
-
+    categoies:Array<string> = ['Action','Arcade','AAA Titles','Puzzles','All']
 }
