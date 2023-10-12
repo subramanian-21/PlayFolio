@@ -8,14 +8,5 @@ import { CorsOptions } from 'cors';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(){
-   
-  }
-  title = 'playfolio';
-
-  ngOnInit(){
-    
-
   
-}
 }
