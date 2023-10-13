@@ -1,16 +1,20 @@
 import { Component } from '@angular/core';
-import { Action } from 'rxjs/internal/scheduler/Action';
-import { Api } from 'src/app/services/api.service';
-
+import axios from 'axios';
 @Component({
   selector: 'app-body-content',
   templateUrl: './body-content.component.html',
-  styleUrls: ['./body-content.component.css']
+  styleUrls: ['./body-content.component.css'],
 })
 export class BodyContentComponent {
-  getData(){
-    let data = new Api()
-    console.log(data.getApi('action',1))
-    return data.getApi('action',1)
+  data: any = [];
+  getApi(genre: string, page: number) {
+    axios
+      .get(
+        `https://api.rawg.io/api/games?key=faf03104a734484db6f8cdc297d6cb53&genre=${genre}&page=${page}`
+      )
+      .then((r) => {
+        this.data = r.data;
+        console.log(this.data);
+      });
   }
 }
