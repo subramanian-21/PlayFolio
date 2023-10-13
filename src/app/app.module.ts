@@ -8,6 +8,7 @@ import { BodyComponent } from './body/body.component';
 import { BodyWrapperComponent } from './body/body-wrapper/body-wrapper.component';
 import { BodyContentComponent } from './body/body-wrapper/body-content/body-content.component';
 import { RouterModule, Routes } from '@angular/router';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 
 
@@ -18,7 +19,8 @@ import { RouterModule, Routes } from '@angular/router';
     AnimateDirective,
     BodyComponent,
     BodyWrapperComponent,
-    BodyContentComponent
+    BodyContentComponent,
+    SearchResultComponent
   ],
   imports: [
     BrowserModule
