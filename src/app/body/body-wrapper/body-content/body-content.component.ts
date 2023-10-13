@@ -9,12 +9,12 @@ export class BodyContentComponent {
 
   @Input() genre:string = ""
   result:any= []
-  loading:boolean = false
+  loading:boolean = true
 ngOnInit(){
   this.getApi(this.genre,1)
 }
   getApi(genre: string, page: number) {
-this.loading = true
+
     axios
       .get(
         `https://api.rawg.io/api/games?key=faf03104a734484db6f8cdc297d6cb53&genres=${genre}&page=${page}`
@@ -22,7 +22,10 @@ this.loading = true
       .then((r) => {
        
         this.result = r.data.results;
-        this.loading = false
+        setTimeout(() => {
+          this.loading = false
+        }, 3000);
+     
         console.log(r.data)
       });
   }
