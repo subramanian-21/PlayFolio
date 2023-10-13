@@ -10,11 +10,7 @@ import { BodyContentComponent } from './body/body-wrapper/body-content/body-cont
 import { RouterModule, Routes } from '@angular/router';
 
 
-const routeModule:Routes = [
-{path : '',component:BodyComponent},
-  {path:"shit",component:BodyContentComponent }
 
-]
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +21,7 @@ const routeModule:Routes = [
     BodyContentComponent
   ],
   imports: [
-    BrowserModule,RouterModule.forRoot(routeModule)
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

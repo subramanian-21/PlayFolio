@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-body-wrapper',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./body-wrapper.component.css']
 })
 export class BodyWrapperComponent {
-
+  @Input() heading = ''
 }
