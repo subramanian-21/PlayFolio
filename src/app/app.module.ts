@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -7,7 +7,14 @@ import { AnimateDirective } from './customDirective/animate.directive';
 import { BodyComponent } from './body/body.component';
 import { BodyWrapperComponent } from './body/body-wrapper/body-wrapper.component';
 import { BodyContentComponent } from './body/body-wrapper/body-content/body-content.component';
+import { RouterModule, Routes } from '@angular/router';
 
+
+const routeModule:Routes = [
+{path : '',component:BodyComponent},
+  {path:"shit",component:BodyContentComponent }
+
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +25,7 @@ import { BodyContentComponent } from './body/body-wrapper/body-content/body-cont
     BodyContentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,RouterModule.forRoot(routeModule)
   ],
   providers: [],
   bootstrap: [AppComponent]
