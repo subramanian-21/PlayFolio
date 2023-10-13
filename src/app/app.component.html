@@ -1,4 +1,7 @@
 <div class="body" >
-  <app-navbar></app-navbar>
-<app-body></app-body>
+<app-navbar #navref></app-navbar>
+<div *ngIf="!navref.search">
+  <app-body ></app-body>
+</div>
+
 </div>

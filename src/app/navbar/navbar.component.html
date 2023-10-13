@@ -1,7 +1,8 @@
 <div class="navbar">
     <div class="left">PlayFolio</div>
     <div class="center">
-        <div class="search-opt"></div><input  type="text" appAnimate [placeholder]="'Search Games...'">
+        <div class="search-opt"></div>
+        <input  type="text" appAnimate (input)="load($event)" [placeholder]="'Search Games...'">
     </div>
     <div class="right">
    

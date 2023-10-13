@@ -25,6 +25,9 @@
         rgba(0, 0, 0, 0.114)
       );
 }
+.animate{
+    animation: hovering 1s infinite;
+}
 
 
 .details{
@@ -36,7 +39,7 @@
     padding: 10px;
     text-align: justify;
     cursor: pointer;
-    animation: hovering 1s ease;
+    animation: hovering 2s ease;
 width: 100%;
 height: 100%;
   
@@ -50,7 +53,7 @@ img{
 }
 .box:hover .mdetails{
     display: none;
-    animation: hovering 1s ease;
+    animation: hovering 2s ease;
 }
 @keyframes hovering {
     0%{
