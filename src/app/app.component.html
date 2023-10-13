@@ -1,7 +1,10 @@
 <div class="body" >
 <app-navbar #navref></app-navbar>
-<div *ngIf="!navref.search">
+<div *ngIf="!navref.search;else searchResult">
   <app-body ></app-body>
 </div>
+<ng-template #searchResult>
+ <app-search-result [searchInput]="navref.search"></app-search-result>
+</ng-template>
 
 </div>
