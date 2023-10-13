@@ -5,5 +5,39 @@
   margin: 5px;
   border-radius: 5px; 
   background-color: aquamarine;
+  position: relative;
+  transition: 0.3s ease;
+  
+}
+.mdetails{
+    display: none;
+    transition: 0.3s ease;
+}
+
+
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.279);
+    background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.963),
+    rgba(0, 0, 0, 0.624),
+    rgba(0, 0, 0, 0.114)
+  );
+    width: 100%;
+    transition: 0.3s ease;
+    height: 100%;
+    padding: 10px;
+    text-align: justify;
+    cursor: pointer;
+
+  
+}
+.box:hover .mdetails{
+    display: block;
   
 }
