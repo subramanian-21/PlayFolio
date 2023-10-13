@@ -7,10 +7,11 @@
   background-color: aquamarine;
   position: relative;
   transition: 0.3s ease;
+  color: white;
   
 }
 .mdetails{
-    display: none;
+    
     top: 0;
     position: absolute;
     height: 100%;
@@ -18,7 +19,7 @@
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.279);
     background-image: linear-gradient(
-        to bottom,
+        to top,
         rgba(0, 0, 0, 0.963),
         rgba(0, 0, 0, 0.624),
         rgba(0, 0, 0, 0.114)
@@ -48,8 +49,8 @@ img{
     z-index: 0.1;
 }
 .box:hover .mdetails{
-    display: block;
-  
+    display: none;
+    animation: hovering 1s ease;
 }
 @keyframes hovering {
     0%{

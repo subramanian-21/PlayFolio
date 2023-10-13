@@ -1,24 +1,20 @@
-<div class="" *ngIf="loadingg then dataf" (load)='getApi("action",1)'>
-    <ng-container *ngFor="let item of result"  >
-        <div class="box">
-            <img src="../../../../assets/Screenshot from 2023-09-01 21-38-18.png" alt="">
-            <div class="mdetails">
-                <div class="details">
-                    <div class=""><strong>GTA V</strong></div>
-                    <div class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eligendi consectetur...</div>
-                    <div class="">2013</div>
-                    
-                </div>
-              
+
+<div *ngFor="let item of result">
+    <ng-container *ngIf="!loading; else loadingg"></ng-container>
+    <div class="box">
+        <img [src]="item.background_image" alt="item.name">
+        <div class="mdetails">
+            <div class="details">
+                <div class=""><strong>{{item.name}}</strong></div>
+                
+                <div class="">{{item.released}}</div>
+                
             </div>
+          
         </div>
+    </div>
 
-    </ng-container>
 </div>
-
-<ng-template #dataf>
-    
-</ng-template>
 
 <ng-template #loadingg>
     <div class="box">
