@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import axios from 'axios';
 
 @Component({
@@ -8,11 +8,13 @@ import axios from 'axios';
 })
 export class BodyWrapperComponent {
   @Input() heading = ''
-  game:any
+  @Output() gameClicked = new EventEmitter()
   result:any= []
   loading:boolean = true
+
+
   openGame(val:any){
-    this.game =val
+    this.gameClicked.emit(val)
 
   }
 ngOnInit(){
