@@ -13,9 +13,10 @@ load(e:any){
   this.onSearchInput(this.search)
 }
 result:any[] = []
-loading:boolean = true
+loading:boolean = false
 
 onSearchInput(searchInput:string){
+  this.loading = true
   axios
   .get(
     `https://api.rawg.io/api/games?key=faf03104a734484db6f8cdc297d6cb53&search=${searchInput}`
