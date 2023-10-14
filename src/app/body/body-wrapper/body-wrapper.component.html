@@ -1,5 +1,47 @@
 
 <div class="heading">{{heading}}</div>
 <div class="scroll">
-    <app-body-content [genre]="heading" ></app-body-content>
+    
+<div class="flex" *ngIf="!loading; else loadingg">
+    <ng-container  *ngFor="let item of result">
+        <div class="box" (click)="openGame(item)">
+            <img [src]="item.background_image" alt="item.name">
+            <div class="mdetails">
+                <div class="details">
+                    <div class=""><strong>{{item.name}}</strong></div>
+                    
+                    <div class="">{{item.released.slice(0,4)}}</div>
+                    
+                </div>
+              
+            </div>
+        </div>
+    </ng-container>
+    
+
+</div>
+<ng-template #loadingg>
+    <div class="flex">
+    <div class="box animate">
+        <div class="mdetails"></div>
+     
+    </div>
+    <div class="box animate">
+        <div class="mdetails"></div>
+     
+    </div>
+    <div class="box animate">
+        <div class="mdetails"></div>
+     
+    </div>
+    <div class="box animate">
+        <div class="mdetails"></div>
+     
+    </div>
+    </div>
+
+   
+</ng-template>
+
+
 </div>
