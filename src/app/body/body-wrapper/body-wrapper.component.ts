@@ -7,4 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class BodyWrapperComponent {
   @Input() heading = ''
+  game:any
+  addGame(){
+    
+  }
 }

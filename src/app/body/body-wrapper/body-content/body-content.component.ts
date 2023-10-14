@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import axios from 'axios';
+import { ServiceComponent } from 'src/app/services/app.service';
 @Component({
   selector: 'app-body-content',
   templateUrl: './body-content.component.html',
@@ -11,8 +12,12 @@ export class BodyContentComponent {
   result:any= []
   loading:boolean = true
   game:any
+
   openGame(val:any){
-    this.game = val
+    this.game =val
+    const service =  new ServiceComponent()
+
+    service.game = val
   }
 ngOnInit(){
   this.getApi(this.genre,1)
