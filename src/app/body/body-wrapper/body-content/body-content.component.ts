@@ -10,6 +10,10 @@ export class BodyContentComponent {
   @Input() genre:string = ""
   result:any= []
   loading:boolean = true
+  game:any
+  openGame(val:any){
+    this.game = val
+  }
 ngOnInit(){
   this.getApi(this.genre,1)
 }
