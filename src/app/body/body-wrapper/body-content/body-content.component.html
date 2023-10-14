@@ -1,6 +1,6 @@
 
-<div *ngFor="let item of result">
-    <ng-container *ngIf="!loading; else loadingg">
+<div class="flex" *ngIf="!loading; else loadingg">
+    <ng-container  *ngFor="let item of result">
         <div class="box">
             <img [src]="item.background_image" alt="item.name">
             <div class="mdetails">
@@ -20,10 +20,27 @@
 
 <ng-template #loadingg>
     <div class="box animate">
-       
-        <div class="mdetails">
-          
-          
-        </div>
+        <div class="mdetails"></div>
+     
+    </div>
+    <div class="box animate">
+        <div class="mdetails"></div>
+     
+    </div>
+    <div class="box animate">
+        <div class="mdetails"></div>
+     
+    </div>
+    <div class="box animate">
+        <div class="mdetails"></div>
+     
+    </div>
+    <div class="box animate">
+        <div class="mdetails"></div>
+     
+    </div>
+    <div class="box animate">
+        <div class="mdetails"></div>
+     
     </div>
 </ng-template>

@@ -10,6 +10,9 @@
   color: white;
   
 }
+.flex{
+    display: flex;
+}
 .mdetails{
     
     top: 0;
