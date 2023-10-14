@@ -1,5 +1,32 @@
 
-    <div class="body">
-        
+    <div class="body" *ngIf="result?.length>0 ;else loading">
+        <ng-container *ngFor="let item of result">
+            <div class="box">
+                <img [src]="item.background_image" alt="item.name">
+                <div class="mdetails">
+                    <div class="details">
+                        <div class=""><strong>{{item.name}}</strong></div>
+                        
+                        <div class="">{{item.released.slice(0,4)}}</div>
+                        
+                    </div>
+                  
+                </div>
+                </div>
+                
+        </ng-container>
     </div>
-
+<ng-template #loading>
+    <div class="container animation"></div> 
+    <div class="container animation"></div> 
+   <div class="container animation"></div> 
+   <div class="container animation"></div>
+   <div class="container animation"></div> 
+   <div class="container animation"></div> 
+  <div class="container animation"></div> 
+  <div class="container animation"></div>
+  <div class="container animation"></div> 
+  <div class="container animation"></div> 
+ <div class="container animation"></div> 
+ <div class="container animation"></div>
+</ng-template>

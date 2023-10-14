@@ -56,13 +56,5 @@ img{
 }
 .box:hover .mdetails{
     display: none;
-    animation: hovering 2s ease;
-}
-@keyframes hovering {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
+    animation: hovering 3s infinite;
 }
