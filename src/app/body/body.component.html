@@ -1,12 +1,24 @@
 
 <div class="body">
     <div class="mbody" *ngIf="!clickedGame; else gameInfo">
-        <div class="wrapper" *ngFor="let item of categoies">
-
-            <app-body-wrapper (gameClicked)="gameClick($event)" [heading]="item"></app-body-wrapper>
+        <div class="game-info">
+            <div class="right">
+                <img [src]="clickedGame.background_image" [alt]="clickedGame.name">
+            </div>
+            <div class="left">
+                <div class="name">Game Name</div>
+                <div class="m">Game Rating</div>
+                <div class="m">Game Release Date</div>
+                <div class="m">Game Genre</div>
+            </div>
         </div>
+       
     </div>
 </div>
 <ng-template #gameInfo>
-    <div class="">sdvjdbvsjbvbdku</div>
+    <div class="wrapper" *ngFor="let item of categoies">
+
+        <app-body-wrapper (gameClicked)="gameClick($event)" [heading]="item"></app-body-wrapper>
+    </div>
+   
 </ng-template>
