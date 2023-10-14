@@ -1,7 +1,12 @@
+
 <div class="body">
-  <div class="mbody">
-    <div class="wrapper" *ngFor="let item of categoies">
-      <app-body-wrapper #wrapperRef [heading]="item"></app-body-wrapper>
+    <div class="mbody" *ngIf="!clickedGame; else gameInfo">
+        <div class="wrapper" *ngFor="let item of categoies">
+
+            <app-body-wrapper (gameClicked)="gameClick($event)" [heading]="item"></app-body-wrapper>
+        </div>
     </div>
-  </div>
 </div>
+<ng-template #gameInfo>
+    <div class="">sdvjdbvsjbvbdku</div>
+</ng-template>

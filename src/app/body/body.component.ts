@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class BodyComponent {
     categoies:Array<string> = ['action','arcade',"indie","puzzle",'strategy']
-    gameClicked(game:any){
-      console.log(game)
+    clickedGame:any
+    gameClick(game:any){
+     this.clickedGame = game
     }
 }
