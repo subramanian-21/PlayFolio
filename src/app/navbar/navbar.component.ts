@@ -26,7 +26,6 @@ onSearchInput(searchInput:string){
     setTimeout(() => {
       this.loading = false
     }, 3000);
-  console.log(r.data)
   });
 }
 }

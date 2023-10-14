@@ -8,8 +8,10 @@ import axios from 'axios';
 })
 export class SearchResultComponent {
 
-  loading:boolean = true
+@Input() load:boolean = true
+
 @Input() searchInput:string = ""
 
 @Input() result:any[] =[]
+
 }

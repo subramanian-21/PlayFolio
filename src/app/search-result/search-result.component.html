@@ -1,5 +1,5 @@
 
-    <div class="body" *ngIf="result?.length>0 ;else loading">
+    <div class="body" *ngIf="!load ; else loading ">
         <ng-container *ngFor="let item of result">
             <div class="box">
                 <img [src]="item.background_image" alt="item.name">
@@ -13,20 +13,23 @@
                   
                 </div>
                 </div>
-                
+
         </ng-container>
     </div>
 <ng-template #loading>
-    <div class="container animation"></div> 
-    <div class="container animation"></div> 
-   <div class="container animation"></div> 
-   <div class="container animation"></div>
-   <div class="container animation"></div> 
-   <div class="container animation"></div> 
-  <div class="container animation"></div> 
-  <div class="container animation"></div>
-  <div class="container animation"></div> 
-  <div class="container animation"></div> 
- <div class="container animation"></div> 
- <div class="container animation"></div>
+    <div class="body">
+        <div class="container animation"></div> 
+        <div class="container animation"></div> 
+       <div class="container animation"></div> 
+       <div class="container animation"></div>
+       <div class="container animation"></div> 
+       <div class="container animation"></div> 
+      <div class="container animation"></div> 
+      <div class="container animation"></div>
+      <div class="container animation"></div> 
+      <div class="container animation"></div> 
+     <div class="container animation"></div> 
+     <div class="container animation"></div>
+    </div>
+
 </ng-template>

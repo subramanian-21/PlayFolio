@@ -1,6 +1,7 @@
 .body{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 5px;
  width: 80%;
  margin: auto;
@@ -8,7 +9,7 @@
  margin-top: 20px;
 }
 .container{
-  
+width: 350px;
     height: 200px;
     margin: 5px;
     border-radius: 5px; 
@@ -22,7 +23,7 @@
     animation: hovering 2s infinite;
 }
 .box{
-    
+width: 300px;
     height: 200px;
     margin: 5px;
     border-radius: 5px; 
