@@ -36,6 +36,10 @@ img{
     width: 450px;
     height: 300px;
 }
+ng-template{
+    display: flex;
+    flex-direction: column;
+}
 .container {
     width:340px;
     height: 200px;
@@ -44,13 +48,16 @@ img{
 .scroll{
     display: flex;
     gap: 2px;
-  width:max-content 
+  width:2000px 
 }
 .imgs{
     overflow-x: scroll;
 }
 ::-webkit-scrollbar{
     height: 5px;
+}
+.flex{
+    display: flex;
 }
 @media (max-width:700px){
     .game-info{

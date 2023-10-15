@@ -10,5 +10,6 @@ export class BodyComponent {
     clickedGame:any
     gameClick(game:any){
      this.clickedGame = game
+     console.log(game)
     }
 }

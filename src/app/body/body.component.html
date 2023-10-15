@@ -1,35 +1,37 @@
 
 <div class="body">
     <div class="mbody" *ngIf="!clickedGame; else gameInfo">
-        <div class="game-info">
-            <div class="right">
-                <img [src]="clickedGame.background_image" [alt]="clickedGame.name">
-            </div>
-            <div class="left">
-                <div class="name">Game Name</div>
-                <div class="m">Game Rating</div>
-                <div class="m">Game Release Date</div>
-                <div class="m">Game Genre</div>
-            </div>
-        </div>
-        <div class="imgs">
-            <div class="scroll">
-                <div class="container"></div>
-                <div class="container"></div>
-                <div class="container"></div>
-                <div class="container"></div>
-                <div class="container"></div>
-                <div class="container"></div>
-                <div class="container"></div>
-            </div>
-        </div>
-       
+        <div class="wrapper" *ngFor="let item of categoies">
+
+            <app-body-wrapper (gameClicked)="gameClick($event)" [heading]="item"></app-body-wrapper>
+        </div> 
     </div>
 </div>
 <ng-template #gameInfo>
-    <div class="wrapper" *ngFor="let item of categoies">
-
-        <app-body-wrapper (gameClicked)="gameClick($event)" [heading]="item"></app-body-wrapper>
+  <div class="mbody">
+    <div class="game-info">
+        <div class="right">
+            <img [src]="clickedGame.background_image" [alt]="clickedGame.name">
+        </div>
+        <div class="left">
+            <div class="name">{{clickedGame.name}}</div>
+            <div class="m">Rating : {{clickedGame.rating}}</div>
+            <div class="m">Release Date : {{clickedGame.released}}</div>
+            <div class="m flex">Genres:<div class="flex" *ngFor="let item of clickedGame.genres"> &nbsp;{{item.name}}&nbsp; </div></div>
+            
+        </div>
     </div>
+    <div class="imgs">
+        <div class="scroll">
+            <div *ngFor="let item of clickedGame.short_screenshots">
+                <img [src]="item.image" class="container" alt="">
+               
+     
+             </div>
+        </div>
+       
+    </div>
+  </div>
+    
    
 </ng-template>
