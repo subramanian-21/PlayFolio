@@ -9,7 +9,9 @@
 </div>
 <ng-template #gameInfo>
   <div class="mbody">
+    <i class="bi bi-arrow-left" (click)="backBtn()"></i>
     <div class="game-info">
+        
         <div class="right">
             <img [src]="clickedGame.background_image" [alt]="clickedGame.name">
         </div>
@@ -22,6 +24,7 @@
         </div>
     </div>
     <div class="imgs">
+        
         <div class="scroll">
             <div *ngFor="let item of clickedGame.short_screenshots">
                 <img [src]="item.image" class="container" alt="">

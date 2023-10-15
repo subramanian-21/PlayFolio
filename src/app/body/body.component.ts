@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
 export class BodyComponent {
     categoies:Array<string> = ['action','arcade',"indie","puzzle",'strategy']
     clickedGame:any
+    backBtn(){
+      this.clickedGame = null
+    }
     gameClick(game:any){
      this.clickedGame = game
      console.log(game)
