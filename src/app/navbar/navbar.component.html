@@ -1,8 +1,8 @@
 <div class="navbar">
     <div class="left">PlayFolio</div>
     <div class="center">
-        <div class="search-opt"></div>
-        <input  type="text" appAnimate [value]="search" (input)="load($event)" [placeholder]="'Search Games...'" autofocus>
+        <div class="search-opt" (click)="focusInput()"> <i class="bi bi-search"></i></div>
+        <input  type="text" #searchInput appAnimate [value]="search" (input)="load($event)" [placeholder]="'Search Games...'" autofocus>
     </div>
     <div class="right">
     </div>

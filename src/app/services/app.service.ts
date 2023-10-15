@@ -1,6 +1,8 @@
-import { Input } from "@angular/core"
+import { Injectable, Input } from "@angular/core"
 import axios from "axios"
-
+@Injectable({
+    providedIn: 'root' // This specifies that the service should be available throughout the app.
+  })
 export class ServiceComponent{
     game:any
     @Input() search:string = ''

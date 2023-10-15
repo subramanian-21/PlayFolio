@@ -1,4 +1,4 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, ElementRef, Input, Output, ViewChild } from '@angular/core';
 import axios from 'axios';
 
 @Component({
@@ -7,6 +7,12 @@ import axios from 'axios';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+
+  @ViewChild('searchInput') searchInput:ElementRef
+  
+  focusInput(){
+    this.searchInput.nativeElement.focus()
+  }
 @Input() search:string = ''
 load(e:any){
   this.search = e.target.value

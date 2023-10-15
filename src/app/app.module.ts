@@ -7,6 +7,7 @@ import { AnimateDirective } from './customDirective/animate.directive';
 import { BodyComponent } from './body/body.component';
 import { BodyWrapperComponent } from './body/body-wrapper/body-wrapper.component';
 import { SearchResultComponent } from './search-result/search-result.component';
+import { BowWrapComponent } from './body/bow-wrap/bow-wrap.component';
 
 
 
@@ -17,7 +18,8 @@ import { SearchResultComponent } from './search-result/search-result.component';
     AnimateDirective,
     BodyComponent,
     BodyWrapperComponent,
-    SearchResultComponent
+    SearchResultComponent,
+    BowWrapComponent
   ],
   imports: [
     BrowserModule
