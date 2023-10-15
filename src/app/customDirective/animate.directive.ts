@@ -17,7 +17,9 @@ export class AnimateDirective {
     this.r.removeClass(this.e.nativeElement,'lengthIncrease')
     this.r.setStyle(this.e.nativeElement,"width","150px")
     this.r.addClass(this.e.nativeElement,'lengthDecrease')
-  
+
+
+    
   }
 
 }
