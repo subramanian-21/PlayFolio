@@ -10,7 +10,7 @@
               <strong>{{ item.name }}</strong>
             </div>
 
-            <div class="">{{ item.released.slice(0, 4) }}</div>
+            <div class="">{{item?.length>0 ? item.released.slice(0, 4) :""}}</div>
           </div>
         </div>
       </div>

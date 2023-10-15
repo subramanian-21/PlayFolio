@@ -16,10 +16,10 @@
             <img [src]="clickedGame.background_image" [alt]="clickedGame.name">
         </div>
         <div class="left">
-            <div class="name">{{clickedGame.name}}</div>
-            <div class="m">Rating : {{clickedGame.rating}}</div>
-            <div class="m">Release Date : {{clickedGame.released}}</div>
-            <div class="m flex">Genres:<div class="flex" *ngFor="let item of clickedGame.genres"> &nbsp;{{item.name}}&nbsp; </div></div>
+            <div class="name">{{clickedGame?.name}}</div>
+            <div class="m">Rating : {{clickedGame?.rating}}</div>
+            <div class="m">Release Date : {{clickedGame?.released}}</div>
+            <div class="m flex">Genres:<div class="flex" *ngFor="let item of clickedGame.genres"> &nbsp;{{item?.name}}&nbsp; </div></div>
             
         </div>
     </div>

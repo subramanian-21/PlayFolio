@@ -1,13 +1,16 @@
 <div class="body">
-  <app-navbar #navref></app-navbar>
-  <div *ngIf="!navref.search; else searchResult">
-    <app-body></app-body>
+  <app-navbar #navref [search]="clickingGame ? '':navref.search"></app-navbar>
+  <div *ngIf="!navref.search ; else searchResult" >
+    <app-body [clickedGame]="clickingGame"></app-body>
+    
   </div>
-  <ng-template #searchResult>
-    <app-search-result
-      [searchInput]="navref.search"
-      [result]="navref.result"
-      [load]="navref.loading"
-    ></app-search-result>
-  </ng-template>
+
 </div>
+<ng-template #searchResult >
+  <app-search-result
+    [searchInput]="navref.search"
+    [result]="navref.result"
+    [load]="navref.loading"
+    (clickGame)="getClickedGame($event)"
+  ></app-search-result>
+</ng-template>

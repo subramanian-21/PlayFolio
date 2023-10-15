@@ -7,14 +7,14 @@ import axios from 'axios';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-search:string = ''
+@Input() search:string = ''
 load(e:any){
   this.search = e.target.value
   this.onSearchInput(this.search)
 }
 result:any[] = []
 loading:boolean = false
-
+@Input() clickedGame:any
 onSearchInput(searchInput:string){
   this.loading = true
   axios

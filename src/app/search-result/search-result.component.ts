@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import axios from 'axios';
 
 @Component({
@@ -14,4 +14,10 @@ export class SearchResultComponent {
 
 @Input() result:any[] =[]
 
+@Output() clickGame = new EventEmitter()
+
+
+clickToView(val:any){
+this.clickGame.emit(val)
+}
 }

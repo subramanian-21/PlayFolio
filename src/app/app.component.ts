@@ -8,4 +8,9 @@ import { ServiceComponent } from './services/app.service';
 })
 export class AppComponent {
   game:any
+  clickingGame:any
+  getClickedGame(val:any){
+    this.clickingGame = val
+    console.log(val)
+  }
 }

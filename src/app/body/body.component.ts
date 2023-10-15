@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-body',
@@ -7,12 +7,11 @@ import { Component } from '@angular/core';
 })
 export class BodyComponent {
     categoies:Array<string> = ['action','arcade',"indie","puzzle",'strategy']
-    clickedGame:any
+    @Input() clickedGame:any
     backBtn(){
       this.clickedGame = null
     }
     gameClick(game:any){
      this.clickedGame = game
-     console.log(game)
     }
 }
