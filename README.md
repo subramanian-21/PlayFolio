@@ -1,7 +1,6 @@
 # PlayFolio
 
-PlayFolio is a web application built with Angular that allows users to explore a wide range of games using the RAWG API. Users can search for games, view game details, and discover new titles. This README will guide you through setting up and using PlayFolio.
-
+PlayFolio is a web application built with Angular that allows users to explore a wide range of games using the RAWG API. Users can search for games, view game details, and discover new titles.
 ![PlayFolio Screenshot](demo.png)
 
 ## Live Demo
