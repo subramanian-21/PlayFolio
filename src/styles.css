@@ -1,24 +1,25 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
-*{
-    margin: 0;
-    padding: 0%;
-    box-sizing: border-box;
-    color: aliceblue;
-}    
-::-webkit-scrollbar{
-    width: 5px;
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+  color: aliceblue;
 }
-::-webkit-scrollbar-thumb{
-    background-color: aliceblue;
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
 }
-::-webkit-scrollbar-track{
-    background-color: black;
+::-webkit-scrollbar-thumb {
+  background-color: aliceblue;
+}
+::-webkit-scrollbar-track {
+  background-color: black;
 }
 @keyframes hovering {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -1,84 +1,79 @@
-.body{
-    width: 100%;
-  
-    display: flex;
-    justify-content: center;
-}
-.mbody{
-    background-color: black;
-    width: 80%;
-  
-}
-.game-info{
-width: 100%; 
-    display:flex;
-    padding: 20px;
-}
-.left{
- 
-margin-left: 20px;
+.body {
+  width: 100%;
 
- 
+  display: flex;
+  justify-content: center;
 }
-.right{
-    position: relative;
+.mbody {
+  background-color: black;
+  width: 80%;
 }
-.name{
-    font-size: 6vw;
-    color: white;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.game-info {
+  width: 100%;
+  display: flex;
+  padding: 20px;
 }
-.m{
-    font-size: larger;
-   font-style: italic;
+.left {
+  margin-left: 20px;
 }
-img{
-    width: 450px;
-    height: 300px;
+.right {
+  position: relative;
 }
-ng-template{
-    display: flex;
-    flex-direction: column;
+.name {
+  font-size: 6vw;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.m {
+  font-size: larger;
+  font-style: italic;
+}
+img {
+  width: 450px;
+  height: 300px;
+}
+ng-template {
+  display: flex;
+  flex-direction: column;
 }
 .container {
-    width:340px;
-    height: 200px;
+  width: 340px;
+  height: 200px;
+  background-color: rgb(69, 68, 68);
+}
+.scroll {
+  display: flex;
+  gap: 2px;
+  width: 2000px;
+}
+.imgs {
+  overflow-x: scroll;
+}
+::-webkit-scrollbar {
+  height: 5px;
+}
+.flex {
+  display: flex;
+}
+i {
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 700px) {
+  .game-info {
+    flex-direction: column;
+  }
+  img {
+    width: 100%;
+    height: 40vw;
+  }
+  .container {
+    width: 300px;
+    height: 180px;
     background-color: rgb(69, 68, 68);
-}
-.scroll{
-    display: flex;
-    gap: 2px;
-  width:2000px 
-}
-.imgs{
-    overflow-x: scroll;
-}
-::-webkit-scrollbar{
-    height: 5px;
-}
-.flex{
-    display: flex;
-}
-i{
-    width: 40px;
-    height: 40px;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-@media (max-width:700px){
-    .game-info{
-        flex-direction: column;
-    }
-    img{
-        width: 100%;
-        height: 40vw;
-       
-    }
-    .container {
-        width:300px;
-        height: 180px;
-        background-color: rgb(69, 68, 68);
-    }
+  }
 }

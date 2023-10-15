@@ -1,13 +1,12 @@
-.body{
-    width: 100%;
-    min-height: 100vh;
-    
-    background-color: black;
-    display: flex;
-    flex-direction: column;
+.body {
+  width: 100%;
+  min-height: 100vh;
 
+  background-color: black;
+  display: flex;
+  flex-direction: column;
 }
-.white{
-    color: aliceblue;
-    font-size: 30px;
+.white {
+  color: aliceblue;
+  font-size: 30px;
 }
